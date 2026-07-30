@@ -6,82 +6,129 @@
   <title>Happy Girlfriend's Day ❤️</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Canvas Confetti Library -->
+  <!-- Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1 class="script-title">Happy Girlfriend's Day!</h1>
-    <p class="sub-title">A tiny corner of the internet, built just for you ❤️</p>
-    
-    <!-- Reasons Generator -->
-    <div class="card reason-card">
-      <h3>Reasons I Love You</h3>
-      <p id="reason-text">Click the button below!</p>
-      <button onclick="generateReason()" class="btn-primary">Tell Me More ❤️</button>
-    </div>
-  </section>
+  <div class="background-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+  </div>
 
-  <!-- PHOTO GALLERY -->
-  <section class="section">
-    <h2 class="section-title">Our Memories 📸</h2>
-    <div class="gallery-grid">
-      <div class="polaroid">
-        <img src="images/photo1.jpg" alt="Memory 1">
-        <p>Our favorite day ✨</p>
+  <main class="container">
+
+    <!-- PAGE 1: HERO & COUNTDOWN -->
+    <section id="page-1" class="page active">
+      <div class="glass-card">
+        <h1 id="typing-title" class="script-title"></h1>
+        <p class="subtitle">A tiny corner of the internet, built just for you ❤️</p>
+        
+        <div class="timer-box">
+          <h3>We've been together for:</h3>
+          <div id="countdown" class="countdown-grid">
+            <div><span id="days">00</span><p>Days</p></div>
+            <div><span id="hours">00</span><p>Hours</p></div>
+            <div><span id="minutes">00</span><p>Mins</p></div>
+            <div><span id="seconds">00</span><p>Secs</p></div>
+          </div>
+        </div>
+
+        <button onclick="nextPage(2)" class="btn-primary glow-btn">Open The World ✨</button>
       </div>
-      <div class="polaroid">
-        <img src="images/photo2.jpg" alt="Memory 2">
-        <p>Late night calls 🌙</p>
+    </section>
+
+    <!-- PAGE 2: COMPLIMENTS & OUR STORY -->
+    <section id="page-2" class="page">
+      <div class="glass-card">
+        <h2 class="script-title">Why You Mean The World To Me</h2>
+        
+        <div class="compliment-box">
+          <p id="compliment-text">Click the button below to see a reason...</p>
+          <button onclick="nextCompliment()" class="btn-secondary-pink">Give Me Another Reason 💕</button>
+        </div>
+
+        <div class="story-snippet">
+          <h3>Our Story 📖</h3>
+          <p>
+            Distance has nothing on us. Every late-night call, every laugh we share, and every plan we make for the future just reminds me why you are my favorite person in the entire world.
+          </p>
+        </div>
+
+        <button onclick="nextPage(3)" class="btn-primary">Our Gallery 📸 ➔</button>
       </div>
-      <div class="polaroid">
-        <img src="images/photo3.jpg" alt="Memory 3">
-        <p>Can't wait to see you ❤️</p>
+    </section>
+
+    <!-- PAGE 3: POLAROIDS HANGING FROM STRING -->
+    <section id="page-3" class="page">
+      <div class="glass-card gallery-card">
+        <h2 class="script-title">Our Favorite Moments</h2>
+        
+        <!-- String Line -->
+        <div class="string-line"></div>
+
+        <div class="polaroid-hang-container">
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo1.jpg" alt="Memory 1">
+            <p>Our favorite day ✨</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo2.jpg" alt="Memory 2">
+            <p>Late night calls 🌙</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo3.jpg" alt="Memory 3">
+            <p>Can't wait to see you ❤️</p>
+          </div>
+        </div>
+
+        <button onclick="nextPage(4)" class="btn-primary">A Special Question ➔</button>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- VIRTUAL DATE INVITATION -->
-  <section class="section invite-container">
-    <div class="card date-card">
-      <h2>Virtual Date Night? 🍕🎬</h2>
-      <p>Will you go on a long-distance virtual date with me on Aug 1st?</p>
-      
-      <div class="btn-group">
-        <button id="yes-btn" onclick="acceptInvite()" class="btn-primary">YES! 🥰</button>
-        <button id="no-btn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()" class="btn-secondary">No 😜</button>
+    <!-- PAGE 4: VIRTUAL DATE INVITATION (DODGING NO) -->
+    <section id="page-4" class="page">
+      <div class="glass-card">
+        <h2 class="script-title">Virtual Date Night? 🍕🎬</h2>
+        <p class="invite-desc">Will you go on a long-distance virtual date with me on Aug 1st?</p>
+        
+        <div class="btn-group">
+          <button id="yes-btn" onclick="acceptInvite()" class="btn-primary">YES! 🥰</button>
+          <button id="no-btn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()" class="btn-secondary">No 😜</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- DIGITAL LOVE LETTER -->
-  <section id="letter-section" class="section">
-    <div class="card letter-card">
-      <h2 class="script-title">My Dearest,</h2>
-      <p class="letter-body">
-        Even though miles separate us right now, you are in every single thought of mine. 
-        Thank you for being my constant, my favorite person to talk to, and the best part of my days. 
-        Distance only proves how strong what we have really is. Happy Girlfriend's Day!
-      </p>
-      <p class="letter-signature">Forever Yours ❤️</p>
+    <!-- PAGE 5: LOVE LETTER & REPLY FORM -->
+    <section id="page-5" class="page">
+      <div class="glass-card letter-card">
+        <h2 class="script-title">My Dearest,</h2>
+        <p class="letter-body">
+          Even though miles separate us right now, you are in every single thought of mine. 
+          Thank you for being my constant, my favorite person to talk to, and the best part of my days. 
+          Distance only proves how strong what we have really is. Happy Girlfriend's Day!
+        </p>
+        <p class="letter-signature">Forever Yours ❤️</p>
 
-      <hr class="divider">
+        <hr class="divider">
 
-      <!-- WRITE BACK FORM -->
-      <div class="reply-box">
-        <h3>Write Back To Me 💌</h3>
-        <p class="reply-sub">Type a note below — it goes straight to my email!</p>
+        <!-- REPLY FORM -->
+        <div class="reply-box">
+          <h3>Write Back To Me 💌</h3>
+          <p class="reply-sub">Type a note below — it goes straight to my email!</p>
 
-        <!-- REPLACE YOUR_FORMSPREE_ID BELOW WITH YOUR FORMSPREE LINK FROM STEP 1 -->
-        <form action="https://formspree.io/f/xojgbzze" method="POST" id="reply-form">
-          <textarea name="message" placeholder="Write your letter here..." required></textarea>
-          <button type="submit" class="btn-primary">Send to Him 🚀</button>
-        </form>
+          <form action="https://formspree.io/f/xojgbzze" method="POST" id="reply-form">
+            <textarea name="message" placeholder="Write your letter here..." required></textarea>
+            <button type="submit" class="btn-primary">Send to Him 🚀</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
