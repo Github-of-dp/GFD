@@ -38,7 +38,7 @@
       </div>
     </section>
 
-    <!-- PAGE 2: COMPLIMENTS & OUR STORY -->
+    <!-- PAGE 2: COMPLIMENTS & EXPANDED OUR STORY -->
     <section id="page-2" class="page">
       <div class="glass-card">
         <h2 class="script-title">Why You Mean The World To Me</h2>
@@ -48,56 +48,102 @@
           <button onclick="nextCompliment()" class="btn-secondary-pink">Give Me Another Reason 💕</button>
         </div>
 
-        <div class="story-snippet">
+        <!-- EXPANDED STORY SECTION -->
+        <div class="story-container">
           <h3>Our Story 📖</h3>
-          <p>
-            Distance has nothing on us. Every late-night call, every laugh we share, and every plan we make for the future just reminds me why you are my favorite person in the entire world.
-          </p>
+          <div class="story-scroll">
+            <p><strong>Chapter 1: The Beginning ✨</strong><br>
+            From the very first conversation, I knew there was something special about you. The hours felt like minutes, and suddenly my everyday routine had you as its favorite highlight.</p>
+            
+            <p><strong>Chapter 2: Beating the Distance ✈️</strong><br>
+            Living far apart isn't always easy, but you make every mile worth it. Late-night phone calls, random updates throughout the day, and counting down to our next meet keep us closer than ever.</p>
+            
+            <p><strong>Chapter 3: Today & Forever ❤️</strong><br>
+            No matter how far away we are right now, my heart is right there with you. Here’s to every laugh, every inside joke, and all the memories we haven't made yet.</p>
+          </div>
         </div>
 
-        <button onclick="nextPage(3)" class="btn-primary">Our Gallery 📸 ➔</button>
+        <button onclick="nextPage(3)" class="btn-primary">Explore Our Gallery 📸 ➔</button>
       </div>
     </section>
 
-    <!-- PAGE 3: POLAROIDS HANGING FROM STRING -->
+    <!-- PAGE 3: 10+ EXPANDED POLAROID GALLERY -->
     <section id="page-3" class="page">
       <div class="glass-card gallery-card">
-        <h2 class="script-title">Our Favorite Moments</h2>
+        <h2 class="script-title">Our Memory Clothesline 🧵</h2>
+        <p class="subtitle">A few of my absolute favorite moments with you</p>
         
-        <!-- String Line -->
         <div class="string-line"></div>
 
         <div class="polaroid-hang-container">
+          <!-- Repeat these blocks for all 10+ photos! -->
           <div class="polaroid-hang">
             <div class="clip"></div>
             <img src="images/photo1.jpg" alt="Memory 1">
-            <p>Our favorite day ✨</p>
+            <p>Where it all started ✨</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
             <img src="images/photo2.jpg" alt="Memory 2">
-            <p>Late night calls 🌙</p>
+            <p>Late night laughs 🌙</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
             <img src="images/photo3.jpg" alt="Memory 3">
-            <p>Can't wait to see you ❤️</p>
+            <p>Your beautiful smile 😍</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo4.jpg" alt="Memory 4">
+            <p>Favorite date 🍕</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo5.jpg" alt="Memory 5">
+            <p>Can't stop smiling ❤️</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo6.jpg" alt="Memory 6">
+            <p>Random video call 📲</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo7.jpg" alt="Memory 7">
+            <p>Sweetest sunset 🌅</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo8.jpg" alt="Memory 8">
+            <p>Silly moments 🤪</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo9.jpg" alt="Memory 9">
+            <p>Counting the days ⏳</p>
+          </div>
+          <div class="polaroid-hang">
+            <div class="clip"></div>
+            <img src="images/photo10.jpg" alt="Memory 10">
+            <p>My whole heart 💖</p>
           </div>
         </div>
 
-        <button onclick="nextPage(4)" class="btn-primary">A Special Question ➔</button>
+        <button onclick="nextPage(4)" class="btn-primary">A Special Request ➔</button>
       </div>
     </section>
 
-    <!-- PAGE 4: VIRTUAL DATE INVITATION (DODGING NO) -->
+    <!-- PAGE 4: CUTEE SPECIAL QUESTION (SEPARATED BUTTONS & DODGING NO) -->
     <section id="page-4" class="page">
       <div class="glass-card">
-        <h2 class="script-title">Virtual Date Night? 🍕🎬</h2>
-        <p class="invite-desc">Will you go on a long-distance virtual date with me on Aug 1st?</p>
+        <h2 class="script-title">Before You Read My Secret Letter... 💌</h2>
+        <p class="invite-desc">Will you give me the honor of being your forever date, starting with a special virtual Girlfriend's Day date on Aug 1st?</p>
         
         <div class="btn-group">
-          <button id="yes-btn" onclick="acceptInvite()" class="btn-primary">YES! 🥰</button>
-          <button id="no-btn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()" class="btn-secondary">No 😜</button>
+          <button id="yes-btn" onclick="acceptInvite()" class="btn-primary">Yes, Always! 🥰</button>
+          <div class="no-btn-wrapper">
+            <button id="no-btn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()" class="btn-secondary">No 😜</button>
+          </div>
         </div>
       </div>
     </section>
