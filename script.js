@@ -23,7 +23,7 @@ window.onload = typeTitle;
 
 // 3. LIVE COUNTDOWN TIMER
 // Set your date: Year, Month (0 = Jan, 1 = Feb, etc.), Day
-const startDate = new Date(2023, 0, 1); 
+const startDate = new Date(2022, 6, 7); 
 
 function updateTimer() {
   const now = new Date();
