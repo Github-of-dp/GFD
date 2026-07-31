@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- Hidden Background Audio -->
+  <!-- Background Audio -->
   <audio id="bg-music" loop>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -24,7 +24,7 @@
 
   <main class="container">
 
-    <!-- PAGE 1: HERO & COUNTDOWN -->
+    <!-- PAGE 1: HERO & EXPANDED COUNTDOWN -->
     <section id="page-1" class="page active">
       <div class="glass-card">
         <h1 id="typing-title" class="script-title"></h1>
@@ -33,6 +33,8 @@
         <div class="timer-box">
           <h3>We've been together for:</h3>
           <div id="countdown" class="countdown-grid">
+            <div><span id="years">00</span><p>Years</p></div>
+            <div><span id="months">00</span><p>Months</p></div>
             <div><span id="days">00</span><p>Days</p></div>
             <div><span id="hours">00</span><p>Hours</p></div>
             <div><span id="minutes">00</span><p>Mins</p></div>
@@ -44,7 +46,7 @@
       </div>
     </section>
 
-    <!-- PAGE 2: COMPLIMENTS & EXPANDED OUR STORY -->
+    <!-- PAGE 2: COMPLIMENTS & ADMIRING HER -->
     <section id="page-2" class="page">
       <div class="glass-card">
         <h2 class="script-title">Why You Mean The World To Me</h2>
@@ -54,115 +56,131 @@
           <button onclick="nextCompliment()" class="btn-secondary-pink">Give Me Another Reason 💕</button>
         </div>
 
-        <!-- EXPANDED STORY SECTION -->
+        <!-- ADMIRING HER SECTION -->
         <div class="story-container">
-          <h3>Our Story 📖</h3>
+          <h3>To The Most Beautiful Girl 🌸</h3>
           <div class="story-scroll">
-            <p><strong>Chapter 1: The Beginning ✨</strong><br>
-            From the very first conversation, I knew there was something special about you. The hours felt like minutes, and suddenly my everyday routine had you as its favorite highlight.</p>
+            <p><strong>Your Smile ✨</strong><br>
+            Honestly, your smile is my absolute favorite thing in the universe. The second I see your face or get a picture from you, my whole day instantly gets a hundred times brighter.</p>
             
-            <p><strong>Chapter 2: Beating the Distance ✈️</strong><br>
-            Living far apart isn't always easy, but you make every mile worth it. Late-night phone calls, random updates throughout the day, and counting down to our next meet keep us closer than ever.</p>
+            <p><strong>So Unbelievably Pretty 👑</strong><br>
+            You are genuinely the most gorgeous person I have ever set eyes on. Every single feature of yours, your eyes, your smile, the way you carry yourself—you take my breath away every single day.</p>
             
-            <p><strong>Chapter 3: Today & Forever ❤️</strong><br>
-            No matter how far away we are right now, my heart is right there with you. Here’s to every laugh, every inside joke, and all the memories we haven't made yet.</p>
+            <p><strong>My Favorite Person ❤️</strong><br>
+            It's not just how stunning you are on the outside; it's your soul, your sweet voice, and the way you make me feel like the luckiest guy alive just by being mine.</p>
           </div>
         </div>
 
-        <button onclick="nextPage(3)" class="btn-primary">Explore Our Gallery 📸 ➔</button>
+        <button onclick="nextPage(3)" class="btn-primary">See Your Gorgeous Gallery 📸 ➔</button>
       </div>
     </section>
 
-    <!-- PAGE 3: 10+ EXPANDED POLAROID GALLERY -->
+    <!-- PAGE 3: HER GORGEOUS PHOTO GALLERY -->
     <section id="page-3" class="page">
       <div class="glass-card gallery-card">
-        <h2 class="script-title">Our Memory Clothesline 🧵</h2>
-        <p class="subtitle">A few of my absolute favorite moments with you</p>
+        <h2 class="script-title">The Most Beautiful Girl 🧵</h2>
+        <p class="subtitle">Just a few of my absolute favorite photos of you</p>
         
         <div class="string-line"></div>
 
         <div class="polaroid-hang-container">
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo1.jpg" alt="Memory 1">
-            <p>Where it all started ✨</p>
+            <img src="images/photo1.jpg" alt="Pretty photo 1">
+            <p>Literally breathtaking 😍</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo2.jpg" alt="Memory 2">
-            <p>Late night laughs 🌙</p>
+            <img src="images/photo2.jpg" alt="Pretty photo 2">
+            <p>That gorgeous smile ✨</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo3.jpg" alt="Memory 3">
-            <p>Your beautiful smile 😍</p>
+            <img src="images/photo3.jpg" alt="Pretty photo 3">
+            <p>My absolute favorite face ❤️</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo4.jpg" alt="Memory 4">
-            <p>Favorite date 🍕</p>
+            <img src="images/photo4.jpg" alt="Pretty photo 4">
+            <p>Cutest person alive 🥺</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo5.jpg" alt="Memory 5">
-            <p>Can't stop smiling ❤️</p>
+            <img src="images/photo5.jpg" alt="Pretty photo 5">
+            <p>How are you so pretty? 💖</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo6.jpg" alt="Memory 6">
-            <p>Random video call 📲</p>
+            <img src="images/photo6.jpg" alt="Pretty photo 6">
+            <p>My heavenly angel 👼</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo7.jpg" alt="Memory 7">
-            <p>Sweetest sunset 🌅</p>
+            <img src="images/photo7.jpg" alt="Pretty photo 7">
+            <p>Stunning as always 🌅</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo8.jpg" alt="Memory 8">
-            <p>Silly moments 🤪</p>
+            <img src="images/photo8.jpg" alt="Pretty photo 8">
+            <p>Can't stop staring 🥰</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo9.jpg" alt="Memory 9">
-            <p>Counting the days ⏳</p>
+            <img src="images/photo9.jpg" alt="Pretty photo 9">
+            <p>My whole world ⏳</p>
           </div>
           <div class="polaroid-hang">
             <div class="clip"></div>
-            <img src="images/photo10.jpg" alt="Memory 10">
-            <p>My whole heart 💖</p>
+            <img src="images/photo10.jpg" alt="Pretty photo 10">
+            <p>Forever my princess 👑</p>
           </div>
         </div>
 
-        <button onclick="nextPage(4)" class="btn-primary">A Special Request ➔</button>
+        <button onclick="nextPage(4)" class="btn-primary">A Fun Question For You ➔</button>
       </div>
     </section>
 
-    <!-- PAGE 4: SPECIAL QUESTION -->
+    <!-- PAGE 4: PERSONAL & FUN QUESTION -->
     <section id="page-4" class="page">
       <div class="glass-card">
-        <h2 class="script-title">Before You Read My Secret Letter... 💌</h2>
-        <p class="invite-desc">Will you give me the honor of being your forever date, starting with a special virtual Girlfriend's Day date on Aug 1st?</p>
+        <h2 class="script-title">Quick Interrogation! 🕵️‍♂️</h2>
+        <p class="invite-desc">Do you promise to let me steal extra hugs, pamper you non-stop, and order all your favorite snacks on our special virtual Girlfriend's Day date?</p>
         
         <div class="btn-group">
-          <button id="yes-btn" onclick="acceptInvite()" class="btn-primary">Yes, Always! 🥰</button>
+          <button id="yes-btn" onclick="acceptInvite()" class="btn-primary">Yes, Deal! 🍕❤️</button>
           <div class="no-btn-wrapper">
-            <button id="no-btn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()" class="btn-secondary">No 😜</button>
+            <button id="no-btn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()" class="btn-secondary">No Way 😜</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PAGE 5: LOVE LETTER & REPLY FORM -->
+    <!-- PAGE 5: DEEP HEARTFELT LOVE LETTER & REPLY FORM -->
     <section id="page-5" class="page">
       <div class="glass-card letter-card">
-        <h2 class="script-title">My Dearest,</h2>
+        <h2 class="script-title">My Dearest Baby,</h2>
+        
         <p class="letter-body">
-          Even though miles separate us right now, you are in every single thought of mine. 
-          Thank you for being my constant, my favorite person to talk to, and the best part of my days. 
-          Distance only proves how strong what we have really is. Happy Girlfriend's Day!
+          Omg what the hell... Nah, what kinda dream was that? My baby, I would never in a million years ever want that to happen. You are my world, my love, my comfort place. Why would I ever want to break up with you, my love?
         </p>
-        <p class="letter-signature">Forever Yours ❤️</p>
+        
+        <p class="letter-body">
+          And me going to my friend over you? Naaa baby, it's not true! I would leave everyone just to be with you, my love. You mean the absolute world to me, baby. I love you so fricking much, I could never leave you.
+        </p>
+
+        <p class="letter-body">
+          Remember how we almost broke up like again, but then I didn't let you just walk away even when I could? It's because I needed you so badly, baby. I can't function without you, my love. You are my world, my sunshine, my everything. Without you, I would pretty much be a dead guy living.
+        </p>
+
+        <p class="letter-body">
+          I love you so, so, so much baby. I would never let you go like that—I'll always stay for you, baby. I don't ever wanna break up. I wanna live with you, spend the rest of my life with you, marry you, have children with you, and build a peaceful, happy life with you and no one else, baby.
+        </p>
+
+        <p class="letter-body">
+          Thank you for being my constant, my favorite person, and the best thing that ever happened to my life. Happy Girlfriend's Day, my princess! ❤️
+        </p>
+
+        <p class="letter-signature">Forever & Always Yours ❤️</p>
 
         <hr class="divider">
 
@@ -172,8 +190,8 @@
           <p class="reply-sub">Type a note below — it goes straight to my email!</p>
 
           <form action="https://formspree.io/f/xojgbzze" method="POST" id="reply-form">
-            <textarea name="message" placeholder="Write your letter here..." required></textarea>
-            <button type="submit" class="btn-primary">Send to Him 🚀</button>
+            <textarea name="message" placeholder="Write your letter back to me here, baby..." required></textarea>
+            <button type="submit" class="btn-primary">Send To Your Boy 🚀</button>
           </form>
         </div>
       </div>

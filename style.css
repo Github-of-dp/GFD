@@ -92,7 +92,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* STORY SCROLL BOX */
+/* ADMIRING CONTAINER */
 .story-container {
   margin: 25px 0;
   text-align: left;
@@ -188,7 +188,7 @@ body {
   font-weight: 600;
 }
 
-/* BUTTON GROUP (SEPARATED & NO OVERLAP) */
+/* BUTTON GROUP */
 .btn-group {
   display: flex;
   justify-content: center;
@@ -242,10 +242,10 @@ body {
   margin-top: 10px;
 }
 
-/* COUNTDOWN & LOVE LETTER */
+/* COUNTDOWN GRID FOR 6 ITEMS */
 .timer-box {
   background: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+  padding: 20px 10px;
   border-radius: 15px;
   margin: 25px 0;
 }
@@ -253,25 +253,39 @@ body {
 .countdown-grid {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 15px;
 }
 
+.countdown-grid div {
+  min-width: 55px;
+}
+
 .countdown-grid span {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #c2255c;
 }
 
+.countdown-grid p {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* LETTER STYLING */
 .letter-body {
   text-align: left;
   line-height: 1.8;
-  margin: 20px 0;
+  margin: 15px 0;
+  font-size: 0.98rem;
 }
 
 .letter-signature {
   text-align: right;
   font-weight: bold;
   color: #d6336c;
+  margin-top: 20px;
 }
 
 .divider {

@@ -33,19 +33,45 @@ function typeTitle() {
 }
 window.onload = typeTitle;
 
-// 4. LIVE COUNTDOWN TIMER
-const startDate = new Date(2022, 6, 7); 
+// 4. ACCURATE LIVE COUNTDOWN TIMER (YEARS, MONTHS, DAYS, HOURS, MINS, SECS)
+// Change this exact start date & time: Year, Month (0 = Jan, 6 = July), Day, Hour, Minute, Second
+const startDate = new Date(2022, 6, 7, 0, 0, 0); 
 
 function updateTimer() {
   const now = new Date();
-  const diff = now - startDate;
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / 1000 / 60) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - startDate.getMonth();
+  let days = now.getDate() - startDate.getDate();
+  let hours = now.getHours() - startDate.getHours();
+  let minutes = now.getMinutes() - startDate.getMinutes();
+  let seconds = now.getSeconds() - startDate.getSeconds();
 
-  document.getElementById('days').innerText = days;
+  if (seconds < 0) {
+    seconds += 60;
+    minutes--;
+  }
+  if (minutes < 0) {
+    minutes += 60;
+    hours--;
+  }
+  if (hours < 0) {
+    hours += 24;
+    days--;
+  }
+  if (days < 0) {
+    const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    days += previousMonth.getDate();
+    months--;
+  }
+  if (months < 0) {
+    months += 12;
+    years--;
+  }
+
+  document.getElementById('years').innerText = years < 10 ? '0' + years : years;
+  document.getElementById('months').innerText = months < 10 ? '0' + months : months;
+  document.getElementById('days').innerText = days < 10 ? '0' + days : days;
   document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
   document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
   document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
@@ -54,11 +80,11 @@ setInterval(updateTimer, 1000);
 
 // 5. COMPLIMENTS GENERATOR
 const compliments = [
-  "Your smile is my absolute favorite thing in the world.",
-  "You make long distance feel so effortless and worth it.",
-  "I love the way your eyes light up when you're excited.",
-  "You're not just my girlfriend, you're my best friend.",
-  "Every single day with you is better than the last."
+  "Your smile is my absolute favorite thing in the universe.",
+  "You are genuinely the most gorgeous person I have ever seen.",
+  "I love how your eyes light up whenever you laugh.",
+  "You are not just my girlfriend, you are my world.",
+  "Every single day with you is my absolute favorite day."
 ];
 
 function nextCompliment() {
@@ -86,7 +112,6 @@ function acceptInvite() {
     origin: { y: 0.6 }
   });
 
-  // Notify Formspree inbox
   fetch("https://formspree.io/f/xojgbzze", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
