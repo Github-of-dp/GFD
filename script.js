@@ -8,7 +8,19 @@ function nextPage(pageNumber) {
   window.scrollTo(0,0);
 }
 
-// 2. TYPING EFFECT FOR TITLE
+// 2. START EXPERIENCE & BACKGROUND MUSIC
+function startExperience() {
+  const music = document.getElementById('bg-music');
+  if (music) {
+    music.volume = 0.5;
+    music.play().catch(error => {
+      console.log("Autoplay prevention bypass log:", error);
+    });
+  }
+  nextPage(2);
+}
+
+// 3. TYPING EFFECT FOR TITLE
 const titleText = "Happy Girlfriend's Day ❤️";
 let charIndex = 0;
 
@@ -21,8 +33,7 @@ function typeTitle() {
 }
 window.onload = typeTitle;
 
-// 3. LIVE COUNTDOWN TIMER
-// Set your date: Year, Month (0 = Jan, 1 = Feb, etc.), Day
+// 4. LIVE COUNTDOWN TIMER
 const startDate = new Date(2022, 6, 7); 
 
 function updateTimer() {
@@ -41,7 +52,7 @@ function updateTimer() {
 }
 setInterval(updateTimer, 1000);
 
-// 4. COMPLIMENTS GENERATOR
+// 5. COMPLIMENTS GENERATOR
 const compliments = [
   "Your smile is my absolute favorite thing in the world.",
   "You make long distance feel so effortless and worth it.",
@@ -55,7 +66,7 @@ function nextCompliment() {
   document.getElementById('compliment-text').innerText = compliments[randomIndex];
 }
 
-// 5. DODGING "NO" BUTTON (Moves freely across screen on hover)
+// 6. DODGING "NO" BUTTON
 function dodgeNoButton() {
   const noBtn = document.getElementById('no-btn');
   const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 60);
@@ -67,7 +78,7 @@ function dodgeNoButton() {
   noBtn.style.zIndex = '9999';
 }
 
-// 6. ACCEPT INVITATION & TRANSITION TO LETTER
+// 7. ACCEPT INVITATION & TRANSITION TO LETTER
 function acceptInvite() {
   confetti({
     particleCount: 150,

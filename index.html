@@ -11,6 +11,12 @@
 </head>
 <body>
 
+  <!-- Hidden Background Audio -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="background-blobs">
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
@@ -34,7 +40,7 @@
           </div>
         </div>
 
-        <button onclick="nextPage(2)" class="btn-primary glow-btn">Open The World ✨</button>
+        <button onclick="startExperience()" class="btn-primary glow-btn">Open The World ✨</button>
       </div>
     </section>
 
@@ -76,7 +82,6 @@
         <div class="string-line"></div>
 
         <div class="polaroid-hang-container">
-          <!-- Repeat these blocks for all 10+ photos! -->
           <div class="polaroid-hang">
             <div class="clip"></div>
             <img src="images/photo1.jpg" alt="Memory 1">
@@ -133,7 +138,7 @@
       </div>
     </section>
 
-    <!-- PAGE 4: CUTEE SPECIAL QUESTION (SEPARATED BUTTONS & DODGING NO) -->
+    <!-- PAGE 4: SPECIAL QUESTION -->
     <section id="page-4" class="page">
       <div class="glass-card">
         <h2 class="script-title">Before You Read My Secret Letter... 💌</h2>
