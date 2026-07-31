@@ -35,7 +35,7 @@ window.onload = typeTitle;
 
 // 4. ACCURATE LIVE COUNTDOWN TIMER (YEARS, MONTHS, DAYS, HOURS, MINS, SECS)
 // Change this exact start date & time: Year, Month (0 = Jan, 6 = July), Day, Hour, Minute, Second
-const startDate = new Date(2022, 6, 7, 0, 0, 0); 
+const startDate = new Date(2022, 6, 7, 17, 46, 50); 
 
 function updateTimer() {
   const now = new Date();
